@@ -1,8 +1,33 @@
-h2 {
+h2, h3 {
     text-align: center;
     color: teal;
 }
 
 body {
     background: silver;
+}
+
+code {
+    background-color: black;
+    color: white;
+    /* padding: 0 3%; */
+    text-align: left;
+    font-family: monospace;
+    /* align-items: center; */
+}
+
+div {
+    background-color: black;
+    /* padding: 10px; */
+    /* margin: 0px; */
+    text-align: center;
+    
+  }
+
+pre {
+    text-align: left;
+}
+
+button {
+    align-self: center;
 }

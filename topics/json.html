@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="/scripts/json.js"></script>
+</head>
+<body>
+    <h2>JSON</h2>
+    <p>JSON stands for JavaScript Object Notation. It is a 
+        syntax for storing and exchanging data. When you exchange
+        data from a browser and a server, the data can only 
+        be text. Here is an example of how JSON string should be formatted
+        as string values:
+    </p>
+    <div>
+        <code id="string">{"make":"Ford","model":"Super Duty","year":2019}</code>
+    </div>
+    <p>For JavaScript the string values can be written with double or single
+        quotes:
+    </p>
+    <div>
+        <code id="string">{make:'Ford', model:'F-350', year:2019}</code>
+    </div>
+    <p>Notice that numbers there are no quotes. Numbers must be an integer
+        or floating point.
+    </p>
+    <p>There are two methods for JSON. The parse and stringify methods.</p>
+    <h3>JSON.parse()</h3>
+    <p>The parse method will parse a string and return it as a Javascript 
+        object. This will only work if the string is written in the JSON
+        format as shown above. We will use the JSON string above to show
+        and example of how the parse method works. 
+    </p>
+    <button id="parsebtn" onclick="jsonParseDemo()">Parse</button>
+    <p id="demo"></p>
+
+    <h3>JSON.stringify()</h3>
+</body>
+</html>
