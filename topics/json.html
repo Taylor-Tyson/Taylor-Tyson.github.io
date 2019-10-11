@@ -7,6 +7,8 @@
     <title>JSON</title>
     <link rel="stylesheet" href="/styles/styles.css">
     <script src="/scripts/json.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
 </head>
 <body>
     <h2>JSON</h2>
@@ -16,15 +18,15 @@
         be text. Here is an example of how JSON string should be formatted
         as string values:
     </p>
-    <div>
-        <code id="string">{"make":"Ford","model":"Super Duty","year":2019}</code>
-    </div>
+    
+    <code id="string">{"make":"Ford","model":"Super Duty","year":2019}</code>
+            
     <p>For JavaScript the string values can be written with double or single
         quotes:
     </p>
-    <div>
-        <code id="string">{make:'Ford', model:'F-350', year:2019}</code>
-    </div>
+    
+    <code id="string1">{make:'Ford', model:'F-350', year:2019}</code>
+    
     <p>Notice that numbers there are no quotes. Numbers must be an integer
         or floating point.
     </p>
@@ -38,6 +40,21 @@
     <button id="parsebtn" onclick="jsonParseDemo()">Parse</button>
     <p id="demo"></p>
 
+    <p>When you push the parse button it calls a function in JavaScript that is 
+        written as: 
+    </p>
+
+    <pre class="prettyprint">
+        <code>
+        function jsonParseDemo () {
+            var obj = JSON.parse(document.getElementById
+            ("string").innerHTML);
+
+            document.getElementById("demo").innerHTML = 
+            obj.make + ", " + obj.model + ", " + obj.year;
+        }</code>
+    </pre>
+
     <h3>JSON.stringify()</h3>
     <p>The JSON stringify method works opposite of the parse method, in that 
         it will take a JavaScript object and turn it into a string. When this 
@@ -47,5 +64,21 @@
     </p>
     <button id="stringiftbtn" onclick="jsonStringifyDemo()">Stringify</button>
     <p id="demo1"></p>
+
+    <p>When you push the stirngify button it calls a function in JavaScript that is 
+            written as: 
+        </p>
+    
+        <pre class="prettyprint">
+        <code>
+        var myObj = {"make":"Ford","model":"Super Duty"
+        ,"year":2019};
+
+        function jsonStringifyDemo () {
+            var myText = JSON.stringify(myObj);
+            document.getElementById("demo1").innerHTML
+            = myText;
+        }</code>
+        </pre>
 </body>
 </html>
