@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loops</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <h2>Loops</h2>
+    <p>Thare are five different kinds of loops that you can use in JavaScript.
+        Loops are used to execute the same block of code more than once. They 
+        are good for automoting repetitive tasks in your program. The loops that
+        we are going to talk about are: 
+    </p>
+    <ul>
+        <li>while loop</li>
+        <li>do-while loop</li>
+        <li>for loop</li>
+        <li>for-in  loop</li>
+        <li>for-of loop</li>
+    </ul>
+    <p>One importnat thing to mention with using loops is that you need to be carefule
+        that you don't code them in a way that creates an infinite loop. This will cause
+        your program and computer major issues! 
+    </p>
+    <h3>While Loop</h3>
+    <p>The while loop is a loop that will exeucte while a variable is set at a 
+        certain value. In our example we are going to click the count down button 
+        and count down from five using a while loop. 
+    </p>
+    <button type=button onclick="countDown()">Count Down</button>
+    <p id="cntDown" class="demo"></p>
+    <p>When you click the button it is calling a function that contains the following:</p>
+    <pre class="prettyprint">
+        <code>
+        function countDown(){
+            let i = 5;
+            let myText = "";
+            
+            while (i >= 0){
+                myText += < br> + i;
+                i--;
+            }
+            document.getElementById("cntDown").innerHTML
+             = myText;
+        }</code>
+    </pre>
+    
+    <h3>Do-while Loop</h3>
+    <p>The do-while loop is similar to using the while loop. The main difference I could find
+        between the two is that when using the while loop, the code in the loop will only be
+        executed if the condition is in a true state. If it is not, then the code will not be
+        executed. With a do-while loop, it will always run the code in the loop once and stop 
+        when the condition is in a false state. 
+    </p>
+    <p>In this example when you click the count up button it will count up from zero to five.   </p>
+    <button type="button" onclick="countUp()">Count Up</button>
+    <p id="cntUp" class="demo"></p>
+    <p>When you click the button it is calling a function that contains the following:</p>
+    <pre class="prettyprint">
+        <code>
+        function countUp() {
+            let i = 0;
+            let myText = "";
+                
+            do {
+                myText += "< br>" + i;
+                i++;
+            }
+            while (i <= 5);
+            document.getElementById("cntUp").innerHTML
+            = myText;
+        }</code>
+    </pre>
+
+
+    <h3>For Loop</h3>
+    <p>When using the for loop, we are also going to demonstrate how to use an array. 
+        For loops are good for iterating through an object, such as an array. In this example 
+        we are going to click on a button that will list out the contents of car manufacturers
+        in a pre-defined array. 
+    </p>
+    <button type="button" onclick="listArray()">List Arrray</button>
+    <p id="listArray" class="demo"></p>
+    <p>When you click the button it is calling a function that contains the following:</p>
+    <pre class="prettyprint">
+        <code>
+        function listArray() {
+            let myText = "";
+                               
+            for (let i = 0; i < manufactuers.length; i++) {
+                myText += manufactuers[i] + ", ";
+            }
+            document.getElementById("listArray").innerHTML
+            = myText;
+        }</code>
+    </pre>
+
+    <h3>For-in Loop</h3>
+    <p>The for-in loop is a cool loop to use to iterate through object. It is similar
+        to the for loop, but the syntax is a little easier and cleaner to use. It uses 
+        a string instead of a number for the counter. 
+    </p>
+    <p>Ini this example we are going to use the same array we used in the for loop demo. 
+        When you click the For-In Loop button it will display the contents of the 
+        manufactuers array just like the for loop. 
+    </p>
+    <button type="button" onclick="forIn()">For-In Loop</button>
+    <p id="forin" class="demo"></p>
+    <p>When you click the button it is calling a function that contains the following:</p>
+    <pre class="prettyprint">
+        <code>
+        function forIn() {
+            let myText = "";
+                
+        for(let i in manufactuers)
+            myText += manufactuers[i] + ", "
+                
+        document.getElementById("forin").innerHTML
+        = myText;
+        }</code>
+    </pre>
+
+    <h3>For-of Loop</h3>
+    <p>The for-of loop is yet another way to iterate through objects such as arrays. One 
+        thing about the for-of loop is that it can also allow you to iterate through other
+        iterable objects such as a string. This is something new to me and sounds cool. 
+    </p>
+    <p>For this example we are going to iterate through a string. Type in a string in and click 
+        on the Iterate button.
+    </p>
+    <input type="text" id="myText"><br>
+    <button type=button onclick="forOf()">For-Of Loop</button>
+    <p id="iterate" class="demo" value=""></p>
+    <p>When you click the button it is calling a function that contains the following:</p>
+    <pre class="prettyprint">
+        <code>
+        function forOf() {
+            let userInput = 
+            document.getElementById("myText").value;
+            let myText = "";
+                
+            for(let char of userInput) {
+                myText += char + " - ";
+            }
+            document.getElementById("iterate").innerHTML
+            = myText;
+        }</code>
+    </pre>
+
+
+
+
+    <script src="/scripts/loops.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</body>
+</html>

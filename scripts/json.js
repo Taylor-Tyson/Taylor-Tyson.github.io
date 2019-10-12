@@ -1,4 +1,4 @@
-var myObj = {"make":"Ford","model":"Super Duty","year":2019};
+const myObj = {"make":"Ford","model":"Super Duty","year":2019};
 
 function jsonParseDemo () {
     var obj = JSON.parse(document.getElementById("string").innerHTML);
