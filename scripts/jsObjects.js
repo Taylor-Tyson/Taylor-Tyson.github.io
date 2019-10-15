@@ -16,14 +16,14 @@ function getLiteral() {
             document.getElementById("literal").innerHTML = truck.manufacturer;
             break;
         case "model":
-                document.getElementById("literal").innerHTML = truck.model;
-                break;
+            document.getElementById("literal").innerHTML = truck.model;
+            break;
         case "year":
-                document.getElementById("literal").innerHTML = truck.year;
-                break;
+            document.getElementById("literal").innerHTML = truck.year;
+            break;
         case "blank":
-                document.getElementById("literal").innerHTML = "";
-                break;
+            document.getElementById("literal").innerHTML = "";
+            break;
     };
 }
 
