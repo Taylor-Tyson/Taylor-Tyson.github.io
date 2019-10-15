@@ -50,8 +50,16 @@ function forOf() {
     let userInput = document.getElementById("myText").value;
     let myText = "";
 
-    for(let char of userInput) {
-        myText += char + " - ";
+    if(userInput != ""){
+        for(let char of userInput) {
+            myText += char + " - ";
+        }
+        document.getElementById("iterate").innerHTML = myText;
     }
-    document.getElementById("iterate").innerHTML = myText;
+    else {
+        alert("Please enter text.");
+    }
+
+
+    
 }
