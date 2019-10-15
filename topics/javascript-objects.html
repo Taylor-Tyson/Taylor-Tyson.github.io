@@ -9,6 +9,50 @@
 </head>
 <body>
     <h2>JavaScript Objects</h2>
+    <p>Objects in JavaScript are an important part of using JavaScript. To me it 
+        seems that objects in JavaScript are somewhat confusing at first, but when you 
+        start to understnad them they are easy to work with. In realiity, almost 
+        everything in JavaScript are objects. Here is a list of some common objects: 
+    </p>
+    <ul>
+        <li>Boolens (If defined correctly)</li>
+        <li>Numbers (If defined correctly)</li>
+        <li>Strings (If defined correctly)</li>
+        <li>Dates</li>
+        <li>Arrays</li>
+        <li>Functions</li>
+    </ul>
+    <p>One thing that you can also do is create your own object. In the next few examples
+        I am going to show how you can do that in different ways. 
+    </p>
 
+    <h3>JavaScript Object Literal</h3>
+    <p>An oject literal is created with a comma seperated list of name-value 
+        pairs. This would look something like:
+    </p>
+    <pre class="prettyprint">
+        <code>
+        let truck = {
+            manufacturer: "Ford",
+            Model: "F-350",
+            Year: 2020
+        };</code>
+    </pre>
+    <p>Now that we have our object, we can get the properties of it all together 
+        or individually. Choose an option below: 
+    </p>
+    <select id="selection" onchange="getLiteral()">
+        <option value="blank"></option>
+        <option value="manufacturer">Manufacturer</option>
+        <option value="model">Model</option>
+        <option value="year">Year</option>
+    </select><br><br>
+    <!-- <button type=button onclick="getLiteral()" value="">Submit</button> -->
+    <p id="literal" class="demo" value=""></p>
+
+    <h2>JavaScript Class</h2>
+
+    <script src="/scripts/jsObjects.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </body>
 </html>
