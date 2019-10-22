@@ -1,3 +1,27 @@
+// import { Truck } from './truck.js';
+
+class Truck {
+    constructor(manufacturer, model, year){
+        this.manufacturer = manufacturer;
+        this.model = model;
+        this.year = year;
+    }
+    get getManufactuer(){
+        return this.manufactuer;
+    }
+
+    get getModel(){
+        return this.model;
+    }
+
+    get getYear(){
+        return this.year;
+    }
+
+    get getTruck(){
+        return this;
+    }
+}
 
 //JavaScript Object Literal
 let truck = {
@@ -27,3 +51,11 @@ function getLiteral() {
     };
 }
 
+function createTruck() {
+    let manu = document.getElementById("manu").value;
+    let model = document.getElementById("model").value;
+    let year = document.getElementById("year").value;
+    let myTruck = new Truck(manu,model,year);
+
+    document.getElementById("newTruck").innerHTML = "You want a " + myTruck.year + " " + myTruck.manufacturer + " " + myTruck.model;
+}

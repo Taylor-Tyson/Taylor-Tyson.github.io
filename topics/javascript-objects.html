@@ -22,7 +22,7 @@
         <li>Arrays</li>
         <li>Functions</li>
     </ul>
-    <p>One thing that you can also do is create your own object. In the next few examples
+    <p>One thing that you can also do is create your own object. In the next couple examples
         I am going to show how you can do that in different ways. 
     </p>
 
@@ -34,8 +34,8 @@
         <code>
         let truck = {
             manufacturer: "Ford",
-            Model: "F-350",
-            Year: 2020
+            model: "F-350",
+            year: 2020
         };</code>
     </pre>
     <p>Now that we have our object, we can get the properties of it all together 
@@ -51,8 +51,36 @@
     <p id="literal" class="demo" value=""></p>
 
     <h2>JavaScript Class</h2>
+    <p>Classes in JavaScript are a type of function that are declared with the 
+        keyword class. The properties of the class are assigned inside of a 
+        constructor method. In this example we are going to be using a Truck 
+        class which was created as follows:
+    </p>
+    <pre class="prettyprint">
+        <code>
+        export class Truck {
+            constructor(manufacturer, model, year){
+                this.manufacturer = manufactuer;
+                this.model = model;
+                this.year = year;
+            }
+        }</code>
+    </pre>
+
+    <p>To use this class we will need to create a Truck. Please fill out and 
+        the Truck submit the information for the Truck you would like to create:
+    </p>
+    <input type="text" id="manu"> Manufacturer<br>
+    <input type="text" id="model"> Model<br>
+    <input type="text" id="year"> Year<br><br>
+    <button type=button onclick="createTruck()">Create Truck</button>
+    <p id="newTruck" class="demo"></p>
+
+
+
 
     <script src="/scripts/jsObjects.js"></script>
+    <!-- <script type="module" src="/scripts/truck.js"></script> -->
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </body>
 </html>
