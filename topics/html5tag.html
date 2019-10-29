@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 Tags</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+        <h2>HTML5 Tags</h2>
+
+        <p>There are a numbre of HTML5 tags but we are goingt to look at just 
+            thre of them. 
+        </p>
+        <ul>
+            <li>HTML5 Video Tag</li>
+            <li>HTML5 Audio Tag</li>
+            <li>HTML5 Canvas Tag</li>
+        </ul>
+
+        <h3>HTML5 Video Tag</h3>
+        <p>The HTML5 video tag allows you to play a video on your web page
+            without the need for a seperate plug-in. With the video tag you can
+            embed a MP4, WebM, or Ogg formats. Below is a video that is embedded 
+            by using the video tag. 
+        </p>
+        <video id="video1" width="475" controls>
+                <source src="/media/big_buck_bunny.mp4" type="video/mp4">
+                <source src="/media/big_buck_bunny.ogv" type="video/ogg">
+                Your browser does not support HTML5 video.
+        </video>
+        <p>The HTML for the tag is as shown below. Notice the controls option which 
+            will give the user the controls to work with the video. Without this 
+            option then there would be no way to start the video, unless you did auto
+            play or other ways to control the video. You can also create your own 
+            controls using javascript.
+        </p>
+    <pre class="prettyprint">
+    <code>
+    &lt;video id="video1" width="475" controls&gt;
+        &lt;source src="/media/big_buck_bunny.mp4" type="video/mp4"&gt;
+        &lt;source src="/media/big_buck_bunny.ogv" type="video/ogg"&gt;
+        Your browser does not support HTML5 video.
+    &lt;/video&gt;</code>
+    </pre>
+
+        <script src="/scripts/ajax.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</body>
+</html>
