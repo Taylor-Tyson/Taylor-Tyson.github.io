@@ -8,6 +8,6 @@ function docLoad() {
         document.getElementById("demo").innerHTML = response.text;
       }
     };
-    request.open("POST", url, true);
+    request.open("GET", url, true);
     request.send();
   }
