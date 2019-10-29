@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+        <h2>AJAX</h2>
+        <p>AJAX stands for Asynchronous JavaScript and XML. I did read that AJAX is a
+            developers dream because it allows you to be able to: 
+        </p>
+        <ul>
+            <li>Get data from a web server after the page has been loaded.</li>
+            <li>Update content on a web page withoug reloading the page.</li>
+            <li>Send data in the background.</li>
+        </ul>
+        <p>There is more that AJAX can do but this should be enough to get started.
+            We are going to use AJAX to change part of our webpage content without
+            refreshing the page.
+        </p>
+        <p>Click on the Randon Fact button below to generate a random fact. you
+            can press this as many times as you would like and it will update the 
+            content without reloading the whole page. Give it a whirl!
+        </p>
+
+        <button onclick="docLoad()">Random Fact</button>
+        <p id="demo" class="demo"></p>
+    
+        <p>When you clicth the button you are calling a function that calls an
+            API that returns a random fact in JSON format using AJAX. The function
+            is coded like this: 
+        </p>
+        <pre class="prettyprint">
+        <code>
+        function docLoad() {
+            let url = "http://numbersapi.com/random/year?json";
+            let request = new XMLHttpRequest();
+                    
+            request.onreadystatechange = function() 
+            {if (this.readyState == 4 && this.status == 200) {
+                let response = JSON.parse(this.responseText);
+                document.getElementById("demo").innerHTML =
+                response.text;
+                }
+            };
+            request.open("GET", url, true);
+            request.send();
+        }</code>
+        </pre>
+        <p>The API that I used can be found <a href="http://numbersapi.com/#42">here</a>.</p>
+
+    <script src="/scripts/ajax.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</body>
+</html>
