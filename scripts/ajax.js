@@ -1,5 +1,4 @@
 function docLoad() {
-    // let url = "http://numbersapi.com/random/year?json";
     let url = "https://api.chucknorris.io/jokes/random?category=history";
     let request = new XMLHttpRequest();
     
