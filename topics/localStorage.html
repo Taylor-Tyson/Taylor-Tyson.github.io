@@ -19,14 +19,40 @@
         it will clear out. 
     </p>
     <h3>Local Storage</h3>
-    <p></p>
+    <p>To demonstrate the local storage, click the "Load Local" button below. 
+        This will load call a function to load trucks into the local storage. 
+        You can also clear the local storage by clicking on the "Clear" button and
+        test that is was removed. 
+    </p>
+    <button onclick="loadLocal()">Load Local</button>
+    <button onclick="clearLocal()">Clear</button>
+    <p id="demo" class="demo"></p>
+
+    <p>Now that we have trucks in the local storage we will retrieve it and display it
+        by clicking the "Retrieve Local" button.
+    </p>
+    <button onclick="getLocal()">Retrieve Local</button>
+    <p id="demo1" class="demo"></p>
+
+    <h3>Session Storage</h3>
+    <p>To demonstrate session storage enter your name in the box below and click 
+        the submit button. This will store your name to the session storage. 
+    </p>
+    <input type="text" id="myText"><br>
+    <button type=button onclick="loadSession()">Submit</button>
+    <p id="demo2" class="demo"></p>
+
+    <p>Now that we have set the name in session storage, lets retrieve it by clicking 
+        the retrieve button. 
+    </p>
+    <button onclick="getSession()">Load Local</button>
+    <p id="demo3" class="demo"></p>
 
 
 
 
-
-
-    <script type="module" src="/scripts/storage.js"></script>
+    <script src="/scripts/storage.js"></script>
+    <!-- <script src="/scripts/truck.js" type="module"></script> -->
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </body>
 </html>
