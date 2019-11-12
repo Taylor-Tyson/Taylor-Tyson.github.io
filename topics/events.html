@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Events</title>
+    <h2>JavaScript Events</h2>
+    <p>Simply put as stated on 
+        <a href="https://www.w3schools.com/js/js_events.asp">w3schools.com</a>, 
+        events are just things that happen to HTML elements. You can use JavaScript
+        to create and define what happens when events happen. There are a lot of 
+        HTML events that you can work with. Some of the more common ones are:  
+    </p>
+    <ul>
+        <li>Onchange</li>
+        <li>Onclick</li>
+        <li>Onmouseover</li>
+        <li>TouchEvent</li>
+    </ul>
+    <P>For a more defined list, visit: <a href="https://www.w3schools.com/tags/ref_eventattributes.asp">here</a>.
+        I will be doing examples of just a few of the ones listed above.         
+    </P>
+    <h3>Onchange</h3>
+    <p>You can use the onchange event to call a function when a value of an element 
+        changes. For our example we are going to make a selection which will notify 
+        us what was selected. 
+    </p>
+    <select id="mySelection" onchange="selection()">
+            <option value=""></option>
+        <option value="Select Me">Select Me</option>
+        <option value="No Select Me">No Select Me</option>
+        <option value="You Better Select Me">You Better Select Me</option>
+    </select>
+    <p id="demo" class="demo"></p>
+
+    <h3>Onclick</h3>
+    <p>This one I have used a lot on these pages. I have used the onclick to many times
+        to call a function in JavaScript when a button is pressed. In this simple example
+        we are going to click the "Click Me" button which will call a function that will 
+        alert us that we clicked the button.  
+    </p>
+    <button onclick="clickMe()">Click Me</button>
+    <p id="demo2" class="demo"></p>
+
+    <h3>Onmouseover</h3>
+    <p>The onmouseover event allows you to do something when the mouse moves over an
+        element. In this example there is a riddle. To find the answer to the riddle
+        you can mouse over the answer box. 
+    </p>
+    <p><i>Can you name three consecutive days without using the words Monday, Tuesday, 
+        Wednesday, Thursday, Friday, Saturday, or Sunday?</i>
+    </p>
+    <h3 id="answer" onmouseover="answer()" onmouseout="mouseOut()">Answer</h3>
+    <p id="demo3" class="demo"></p>
+
+
+    <p>Riddle referenced from: <a href="https://www.riddles.com/quiz/10-easy-riddles">riddles.com</a></p>
+
+
+
+    <script src="/scripts/events.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</head>
+<body>
+    
+</body>
+</html>

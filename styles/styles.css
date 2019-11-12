@@ -3,6 +3,10 @@ h2, h3 {
     color: teal;
 }
 
+#answer {
+    color: black;
+}
+
 body {
     background: white;
 }
