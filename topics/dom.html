@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>DOM</title>
+</head>
+<body>
+    <h2>Document Object Model (DOM)</h2>
+    <p>The document object model (DOM) is techincally an API. Using the DOM
+        allows you to be able to get, change, add, or delete HTML elements on 
+        an HTML page. DOM is not a programming language but allows JavaScript, 
+        or other languages, to in essence call the DOM and make changes. 
+    </p>
+    <p>In this example we are going to use JavaScript to append li objects to 
+        a list. You will also have the option to remove the last object added 
+        in case you make a mistake. Enter a name or text and click on the "Add"
+        button to add it to the list. If you need to remove your entry click on
+        "Undo" button.
+    </p>
+        <p>People who are cool:</p>
+    <ul id="list"></ul>
+
+    <input type="text" id="myText"><br><br>
+    <button onclick="addToList()">Add</button>
+    <button onclick="remove()">Undo</button>
+
+    <P>To add the item to the list we are using appendChild.
+        And to remove the last item added, we are using removeChild. 
+    </P>
+
+    <script src="/scripts/dom.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</body>
+</html>
