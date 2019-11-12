@@ -23,9 +23,17 @@ function clickMe() {
 }
 
 function answer() {
-    document.getElementById("demo3").innerHTML = "Yesterday, Today, and Tomorrow.";
+    document.getElementById("demo3").innerHTML = "Yesterday, Today, and Tomorrow";
 }
 
 function mouseOut() {
     document.getElementById("demo3").innerHTML = "";
+}
+
+function touchAnswer() {
+    document.getElementById("demo4").innerHTML = "Footsteps";
+}
+
+function touchEnd() {
+    document.getElementById("demo4").innerHTML = "";
 }

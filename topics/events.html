@@ -17,7 +17,7 @@
         <li>Onchange</li>
         <li>Onclick</li>
         <li>Onmouseover</li>
-        <li>TouchEvent</li>
+        <li>Touch Event</li>
     </ul>
     <P>For a more defined list, visit: <a href="https://www.w3schools.com/tags/ref_eventattributes.asp">here</a>.
         I will be doing examples of just a few of the ones listed above.         
@@ -55,10 +55,18 @@
     <h3 id="answer" onmouseover="answer()" onmouseout="mouseOut()">Answer</h3>
     <p id="demo3" class="demo"></p>
 
-
-    <p>Riddle referenced from: <a href="https://www.riddles.com/quiz/10-easy-riddles">riddles.com</a></p>
-
-
+    <h3>Touch Event</h3>
+    <p>The touch event is good for touch devices, such as a mobile phone, tablet,
+        or a computer using touch screen. The touch event will allow you to do 
+        something when an element is touched. For this example we are going to 
+        use another riddle and you can touch the answer to display it. 
+    </p>
+    <p><i>The more you take, the more you leave behind. What am I?</i>
+        </p>
+    <p id="demo4" class="demo"></p>
+    <h3 id="answer" ontouchstart="touchAnswer()" ontouchend="touchEnd()">Answer</h3>
+    
+    <p>Riddles referenced from: <a href="https://www.riddles.com/quiz/10-easy-riddles">riddles.com</a></p>
 
     <script src="/scripts/events.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
