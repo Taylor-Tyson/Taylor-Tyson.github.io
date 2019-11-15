@@ -10,5 +10,7 @@ function addToList() {
 function remove() {
     let myList =  document.getElementById("list");
     myList.removeChild(myList.childNodes[myList.childNodes.length-1]);
+    // myList.removeChild(myList.childNodes[1]);
+
     document.getElementById('myText').value = "";
 }
