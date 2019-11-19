@@ -1,11 +1,11 @@
 function ifStatement() {
-    if (2 == 2 ){
+    if (2 == 2){
         document.getElementById("demo").innerHTML = " 2 is equal to 2!"
     }
 }
 
 function elseStatement() {
-    if (2 == 3 ){
+    if (2 == 3){
         document.getElementById("demo1").innerHTML = " 2 is equal to 2!"
     }
     else {
@@ -15,10 +15,10 @@ function elseStatement() {
 }
 
 function elseIfStatement() {
-    if (2 == 3 ){
+    if (2 == 3){
         document.getElementById("demo2").innerHTML = " 2 is equal to 2!"
     }
-    else if (3 == 3 ) {
+    else if (3 == 3) {
         document.getElementById("demo2").innerHTML = " 3 is equal to 3!"
 
     }

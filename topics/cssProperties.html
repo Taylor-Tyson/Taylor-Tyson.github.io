@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>CSS Properties - JavaScript</title>
+</head>
+<body>
+    <h2>CSS Class Properties Using Javascript</h2>
+    <p>With JavaScript there is the ability to modify classes and attributes
+        for HTML elements. I am going to show a couple examples on how this 
+        works. We will start with modifying an attribute for am image tag. 
+    </p>
+    <h3>Modifying Attributes</h3>
+    <p>When working with attributes, they are usually a name value pair. 
+        Most common attributes are the src and img tags, but there are many
+        more. There are four methods that can be used to modify the attributs. 
+    </p>
+    <ul>
+        <li>hasAttribute()</li>
+        <li>getAttribute()</li>
+        <li>setAttribute()</li>
+        <li>removeAttribute()</li>
+    </ul>
+    <p>Below is a simple example on how this works.</p>
+    <img src="/media/smiley_150.jpg" id="myImage"><br><br>
+    <p id="demo" class="demo"></p>
+    <button onclick="hasAtt()">Has Attribute</button>
+    <button onclick="getAtt()">Get Attribute</button>
+    <button onclick="removeAtt()">Reomove Attribute</button><br><br>
+    <button onclick="makeHappy()">Make Happy</button>
+    <button onclick="setAtt()">Make Sad</button>
+    
+    <h3>Modifying Classes</h3>
+    <p>Modifying classes is similar to atrributes. With classes you are modifying 
+        the class attribute that is tied to the CSS class selector. In this way 
+        you can change the look and feel of your web page with JavaScript. You 
+        can use the className and classList properties. These are the methods that 
+        can be used. 
+    </p>
+    <ul>
+        <li>classList.add()</li>
+        <li>classList.toggle()</li>
+        <li>classList.contains()</li>
+        <li>classList.replace()</li>
+        <li>classList.remove()</li>
+    </ul>
+    <p>Below is an example of how this works.</p>
+    <p id="myP">What are you going to do to me?</p>
+    <p id="demo1" class="demo"></p>
+    <button onclick="addClass()">Make Purple</button>
+    <button onclick="toggleClass()">Toggle Blue</button>
+    <button onclick="containClass()">Contains Blue?</button><br><br>
+    <button onclick="replaceClass()">Replace with Red</button>
+    <button onclick="removeAll()">Reset</button>
+
+    <script src="/scripts/cssProperties.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</body>
+</html>

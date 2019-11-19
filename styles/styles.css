@@ -35,6 +35,18 @@ canvas {
     border:2px solid teal;
 }
 
+.purple {
+    color: purple;
+    font-size: large;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
 
 /* CSS styling used from https://raw.githubusercontent.com/google/code-prettify/master/styles/sunburst.css */
 /* Pretty printing styles. Used with prettify.js. */
