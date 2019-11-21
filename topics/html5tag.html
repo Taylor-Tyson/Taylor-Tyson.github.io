@@ -74,19 +74,22 @@
 
         <h3>HTML5 Canvas Tag</h3>
 
-        <p>The cancas tag allows you to add graphics and to your page that run on the 
+        <p>The canvas tag allows you to add graphics and to your page that run on the 
             fly. You can use the canvas tag to draw text, draw graphics, to create games, 
-            and this can all be animated or interactive. 
+            and this can all be animated or interactive. It is important to understand that
+            a canvas cannot draw on its own, it is just a canvas or container for your 
+            graphics. 
         </p>
-        <button onclick="smile()">Smile</button>
+        <p>For my simple example to see a canvas tag, click on the picture button and 
+            it will populate/draw in the canvas. You can then click the clear button 
+            to clear the canvas so you can draw again. 
+        </p>
         <button onclick="picture()">Picture</button>
-        <button onclick="loop()">Clear<button><br>
+        <button onclick="clearCan()">Clear</button><br><br>
 
-        <canvas id="canvas" height="176" width="176">
+        <canvas id="canvas" height="100" width="400">
             Sorry, your browser does not support canvas.
         </canvas>
-
-
 
         <script src="/scripts/canvas.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>

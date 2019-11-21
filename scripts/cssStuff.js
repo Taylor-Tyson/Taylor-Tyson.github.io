@@ -1,5 +1,3 @@
-
-
 function clearMsg() {
     document.getElementById("demo").innerHTML = "";
 }
