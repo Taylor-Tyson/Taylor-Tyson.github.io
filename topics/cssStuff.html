@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>CSS Stuff</title>
+</head>
+<body>
+    <h3>CSS Transitions, Animations, and Transformations</h3>
+    <p>On this page we are going to talk about and show examples of using CSS to 
+        transition, animate, and transform property values of an HTML element. 
+    </p>
+
+<h2>CSS Transitions</h2>
+<p>CSS transitions allow you to change the property values of an element smoothly
+    and in a given duration of time. In the example below you can hover over the
+    image and see the transition to a new imgage. The tranistion time is set to 
+    four seconds which is kind of long but I wanted to show the transition longer.  
+</p>
+<div id="transition"></div>
+
+<h2>Animations</h2>
+<p>In short, CSS animations allow you to animate elements in HTML without using 
+    Flash or JavaScript. That is good because some browsers are not going to support
+    Flash much longer. The thing to make note of when using animations is the keyframes
+    rule. You have to bind an animation to a keyframe which will run the animation 
+    gradually from the current style to what you want it to be.
+</p>
+<p>In the following example we are going to use an animation to </p>
+
+<p id="myAnimation" class="demo">
+    This is my text that is sliding back and forth being animated. Cool eh!
+</p>
+
+<h2>Transformations</h2>
+<p>Using Transformations allows you to rotate, scale, move, or skew HTML 
+    elements. Hover on each of the smiley faces below to see examples of
+    transformations. 
+</p>
+<p id="demo" class="demo"></p><br><br>
+
+<img id="image" onmouseover="rotateMsg()" onmouseout="clearMsg()" src="/media/smiley_150.jpg" alt="Smiley Face" class="rotate180">
+<img id="image" onmouseover="skewMsg()" onmouseout="clearMsg()" src="/media/smiley_150.jpg" alt="Smiley Face" class="skew"><br>
+<img id="image" onmouseover="scaleMsg()" onmouseout="clearMsg()" src="/media/smiley_150.jpg" alt="Smiley Face" class="scale">
+<img id="image" onmouseover="spinMsg()" onmouseout="clearMsg()" src="/media/smiley_150.jpg" alt="Smiley Face" class="spin">
+
+
+<script src="/scripts/cssStuff.js"></script>
+</body>
+</html>
