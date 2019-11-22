@@ -54,7 +54,7 @@ function loadSession() {
     
     if (typeof(Storage) !== "undefined") {
         sessionStorage.setItem("name", userInput);
-        document.getElementById("demo2").innerHTML = "Name is now set to" + userInput;
+        document.getElementById("demo2").innerHTML = "Name is now set to " + userInput;
     } else {
         document.getElementById("demo2").innerHTML = "Sorry! No Web Storage support."
       }
