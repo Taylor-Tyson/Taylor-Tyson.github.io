@@ -1,3 +1,9 @@
+let cart = [];
+let qty = 0;
+let itemSelected;
+
+
+
 class Item {
     constructor(itemName, number, cost){
         this.itemName = itemName;
@@ -98,6 +104,7 @@ function welcomeMessage(m) {
 }
 
 //This is to select and show the items. 
+
 function itemSelect() {
     let opt = document.getElementById("item");
     let choice = opt.options[opt.selectedIndex].value;
@@ -107,38 +114,42 @@ function itemSelect() {
             document.getElementById("product").src='/media/fuel_filter.jpg';
             document.getElementById("partNumber").innerHTML="Part Number: " + items[0].number;
             document.getElementById("itemCost").innerHTML="Cost " + items[0].cost;
+            itemSelected = 0;
             break;
         case "alternator":
             document.getElementById("product").src='/media/alternator.jpg';
             document.getElementById("partNumber").innerHTML="Part Number: " + items[1].number;
             document.getElementById("itemCost").innerHTML="Cost " + items[1].cost;
+            itemSelected = 1;
             break;
         case "starter":
             document.getElementById("product").src='/media/starter.png';
             document.getElementById("partNumber").innerHTML="Part Number: " + items[2].number;
             document.getElementById("itemCost").innerHTML="Cost " + items[2].cost;
+            itemSelected = 2;
             break;
         case "blank":
             document.getElementById("product").src='';
             document.getElementById("partNumber").innerHTML="";
             document.getElementById("itemCost").innerHTML="";
+            itemSelected = '';
             break;
     };
 }
 
 //This adds items to the cart
-let cart = [];
-let qty = 0;
+
 function addToCart() {
     let opt = document.getElementById("item");
     let item = opt.options[opt.selectedIndex].value; 
-    
+
     if (typeof(Storage) !== "undefined" && item != 'blank') {
-        cart.push(item);
+        cart.push(items[itemSelected]);
         sessionStorage.setItem("cart", JSON.stringify(cart));
         qty = qty + 1;
         document.getElementById("cartQty").innerHTML="Cart quantity: " + qty;
-    } else {
+    }
+    else {
         alert("Please select item to add to cart.")
     };
 }
@@ -146,7 +157,7 @@ function addToCart() {
 //This clears the cart
 function clearCart() {
     cart = [];
-    qty =0;
+    qty = 0;
     document.getElementById("cartQty").innerHTML='';
     sessionStorage.setItem("cart", JSON.stringify(cart));
 }
