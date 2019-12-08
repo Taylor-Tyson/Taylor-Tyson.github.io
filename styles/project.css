@@ -1,0 +1,54 @@
+h2, h3 {
+    text-align: center;
+    color: blue;
+}
+
+#welcome {
+    color: blue;
+    text-align: center;
+}
+
+body {
+    background: whitesmoke;
+}
+
+#product {
+    /* border: 1px solid blue; */
+    border-radius: 4px;
+    padding: 5px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#logo {
+    padding: 1em;
+    /* border: 1px solid blue; */
+    /* border-radius: 4px; */
+    padding: 5px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: 3s;
+    animation-direction: alternate;
+}
+
+/* CSS Animations */
+@keyframes slidein {
+    from {
+      margin-left: auto;
+      width: 0px; 
+    }
+  
+    to {
+      margin-left: auto;
+      width: 300px;
+    }
+}
+
+

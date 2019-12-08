@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/project.css">
+    <title>Parts Page</title>
+</head>
+<body onload="setPage()">
+   <h2 id="mainHeader"></h2> 
+   <image id="logo"></image>
+   <p id="welcome"></p>
+   <p>Select item:</p>
+    <select id="item" onchange="itemSelect()">
+        <option value="blank"></option>
+        <option value="fuelFilter">Fuel Filter</option>
+        <option value="alternator">Alternator</option>
+        <option value="starter">Starter</option>
+    </select><br>
+    <image id="product"></image>
+    <p id="partNumber"></p>
+    <p id="itemCost"></p>
+    <button id="addToCart" onclick="addToCart()">Add to Cart</button>
+    <button id="clearCart" onclick="clearCart()">Clear Cart</button>
+    <!-- <button id="showCart" onclick="showCart()">show Cart</button> -->
+    <button id="checkout" onclick="checkout()">Checkout</button><br>
+    <p id="cartQty"></p>
+<script src="/scripts/project.js"></script>
+</body>
+</html>
