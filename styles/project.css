@@ -12,6 +12,27 @@ body {
     background: whitesmoke;
 }
 
+table, th, td {
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    width: 80%;
+}
+  
+th {
+    height: 20px;
+}
+
+tr:nth-child(even) {background-color: silver;}
+
+th, td {
+    padding: 5px;
+    /* text-align: left; */
+  }
+
 #product {
     /* border: 1px solid blue; */
     border-radius: 4px;
@@ -51,4 +72,41 @@ body {
     }
 }
 
+/* CSS for transition */
+  section {
+    padding: 1em;
+    margin: 0 auto;
+    width: 400px;
+    height: 268px;
+    position: relative;
+  }
+  
+  section img {
+    margin: 0 auto;
+    width: 400px;
+    height: 268px;
+    position: absolute;
+  }
 
+  .top {
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+  }
+  
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

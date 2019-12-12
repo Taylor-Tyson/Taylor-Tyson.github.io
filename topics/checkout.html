@@ -10,23 +10,21 @@
 <body onload="setPage()">
     <h2 id="mainHeader"></h2>
     <p id="welcome"></p>
+    <p>Please enter your zip code to calculate billing:</p>
+    <input type="number" id="userZip"><br><br>
+    <button onclick="calculateTotal()">Calculate Total</button><br><br>
     <p id="cart"></p>
     <table id="cartTable">
         <tr>
             <th>Item</th>
-            <th>Number</th>
+            <th>Part Number</th>
             <th>Cost</th> 
         </tr>
-        <tr>
-            <td><td>
-        </tr>
-        <tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-        </tr>
     </table>
+    <p id="subTotal"></p>
+    <p id="tax"></p>
+    <p id="total"></p>
+    <button onclick="submitOrder()">Submit Order</button>
 
 
     
