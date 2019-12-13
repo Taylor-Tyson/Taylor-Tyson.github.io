@@ -9,5 +9,23 @@
 </head>
 <body>
     <h1>Week 13</h1>
+    <p>
+        This week I was able to get my program finished. There is one of the 
+        CSS topics that I didn't work in because I couldn't think of a way that 
+        made sense to add it. I hope that this doesn't hurt my grade too bad. I 
+        am using an API where I can get the sales tax rate by entering a zip 
+        code. Calling the API and getting a result was simple but I had a 
+        struggle to get the data I needed from the JSON that was returned. 
+        It took me a bit to figure out that to access the data I needed, that 
+        it was in an array. I don't know how best to explain it, but this is what 
+        I had to do: response.TaxInfoItems[0].TaxRate. The response was my parsed 
+        JSON, and within that I had to access the TaxRate in the TaxInfoItems[0]. 
+        At first I was trying to access it like: response.TaxInfoItems.0.TaxRate, 
+        but using the 0 would not work. I tried a few different ways unsuccessfully.
+        As I looked at the returned JSON more closely I was able to see that it 
+        looked like the TaxRate and other data was in an array. So I tried to access 
+        it as if it was in an array and it worked. It was a good moment when I got 
+        it to work. 
+    </p>
 </body>
 </html>
